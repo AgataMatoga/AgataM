@@ -1,0 +1,360 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+	background-color: #E8E8E8;
+	font-family: 'Khula';
+	font-size: 14px;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+h1 {
+	font-weight: 100;
+	font-size: 30px;
+	padding: 20px 0;
+	text-align: left;
+}
+section.main {
+	padding: 20px 0;
+}
+.intro { 
+	color: #000;
+	background: #2b263b;
+	background-size: cover;
+	width: 100%;
+	height: 600px;
+	position: relative;
+}
+.content-limiter {
+	width: 1000px;
+	margin: 0 auto;
+}
+.intro-holder {
+	width: 270px;
+	position: absolute;
+	top: 35%;
+	left: 50%;
+	margin-left: -155px;
+	font-family: 'Josefin Sans', sans-serif;
+	text-align: center;
+	padding: 40px 20px;
+	color: #e54f4f;
+}
+.intro-holder h1 {
+	font-weight: 800;
+	font-size: 42px;
+	text-transform: uppercase;
+	margin-bottom: 0px;
+	margin-top: 0px;
+	letter-spacing: 1px;
+	padding-bottom: 4px;
+	padding-top: 0px;
+	font-family: 'Josefin Sans', sans-serif;
+	text-align: center;
+}
+.intro-holder h2 {
+	font-size: 12px;
+	text-transform: uppercase;
+	letter-spacing: 5px;
+}
+section.main.about {
+	height: 300px;
+	background: url('../images/bg.png') center no-repeat;
+	background-size: cover;
+	position: relative;
+	padding: 0px;
+	background-attachment: fixed;
+}
+section.main.about .bg-overlay {
+	width: 100%;
+	height: 100%;
+	top: 0px;
+	left: 0px;
+	background-color: #2b263b;
+	opacity: 0.7; 
+	position: absolute;
+}
+.hello-text {
+	font-size: 60px;
+	font-weight: bold;
+	color: #E54F4F;
+	padding-top: 170px;
+	line-height: 50px;
+	position: relative;
+}
+.hello-small {
+	color: #fff;
+	position: relative;
+	font-weight: 100;
+	font-size: 16px;
+	padding-left: 4px;
+}
+.artworks-holder {
+	width: 100%;
+	text-align: center;
+	color: #2b263b;
+	padding-bottom: 50px;
+}
+.artwork-item {
+	width: 31%;
+	margin: 10px;
+	height: 200px;
+	display: inline-block;
+	vertical-align: top;
+	background-position: top center;
+	overflow: hidden;
+	position: relative;
+	outline: 	0;
+}
+a.artwork-trigger {
+	display: inline-block;
+	vertical-align: top;
+	outline: 0;
+}
+.artwork-item .info-overlay {
+	width: 100%;
+	height: 100%;
+	background: rgba(43, 38, 59, 0.81);
+	position: absolute;
+	top: 100%;
+	left: 0px;
+	transition: all 0.3s;
+	cursor: pointer;
+}
+.artwork-item:hover .info-overlay {
+	top: 0px;
+}
+.artwork-item .info-overlay .title {
+	padding-top: 27%;
+	display: block;
+	font-size: 24px;
+	font-weight: 600;
+	color: #E54F4F;
+	margin-bottom: 5px;
+}
+.artwork-item .info-overlay .subtitle {
+	display: block;
+	font-size: 14px;
+	font-weight: 100;
+	color: #fff;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+}
+.artwork-item.grano {
+	background: url('../images/gve-presentation.png');
+	background-size: cover;
+}
+.artwork-item.owl {
+	background: url('../images/owl.png') no-repeat;
+	background-size: cover;
+}
+.artwork-item.christmas {
+	background: url('../images/christmas-card.png');
+	background-size: cover;
+}
+.artwork-item.lp-infogr {
+	background: url('../images/infographic.png');
+	background-size: cover;
+}
+.artwork-item.pch {
+	background: url('../images/pc-1951-mockup.png');
+	background-size: cover;
+}
+.artwork-item.iconset {
+	background: url('../images/icon-set.png');
+	background-size: cover;
+}
+.skills-holder {
+	background-color: #2b263b;
+	color: #e54f4f;
+	padding-bottom: 40px;
+}
+.skill-column {
+	text-align: left;
+	margin-bottom: 50px;
+	width: 49%;
+	display: inline-block;
+	vertical-align: top;
+}
+.skill-descr {
+	display: inline-block;
+	vertical-align: top;
+	width: 300px;
+	margin-right: 50px;
+}
+.skill-descr .skill-icon {
+	width: 160px;
+	height: 140px;
+}
+.skill-descr .skill-icon.code {
+	background: url('../images/coding-skill.png') 0px 0px no-repeat;
+}
+.skill-descr .skill-icon.design {
+	background: url('../images/design-skill.png') 0px 0px no-repeat;
+}
+.skill-descr .title {
+	font-size: 24px;
+	margin-bottom: 5px;
+	margin-top: 10px
+}
+.skill-descr .descr {
+	color: #fff;
+	font-weight: 100;
+	line-height: 18px;
+}
+.skill-stats {
+	margin-top: 20px;
+}
+.skill-item .skill-title {
+	display: inline-block;
+	vertical-align: middle;
+	margin-right: 7px;
+	line-height: 30px;
+	width: 100px;
+}
+.skill-item .filling {
+	display: inline-block;
+	vertical-align: middle;
+}
+.skill-item  .filling .dot {
+	display: inline-block;
+	width: 14px;
+	height: 14px;
+	border-radius: 50%;
+	background-color: #e54f4f; 
+}
+.skill-item  .filling .dot.empty {
+	display: inline-block;
+	width: 16px;
+	height: 16px;
+	border-radius: 50%;
+	background-color: rgba(0,0,0,0.5); 
+}
+footer {
+	background-color: #1A1A1A;
+	color: #e54f4f;
+	text-align: center;
+	padding: 50px 0;
+	line-height: 30px;
+}
+
+/*
+    Colorbox Core Style:
+    The following CSS is consistent between example themes and should not be altered.
+*/
+#colorbox, #cboxOverlay, #cboxWrapper{position:absolute; top:0; left:0; z-index:9999; overflow:hidden;}
+#cboxWrapper {max-width:none;}
+#cboxOverlay{position:fixed; width:100%; height:100%;}
+#cboxMiddleLeft, #cboxBottomLeft{clear:left;}
+#cboxContent{position:relative;}
+#cboxLoadedContent{overflow:auto; -webkit-overflow-scrolling: touch;}
+#cboxTitle{margin:0;}
+#cboxLoadingOverlay, #cboxLoadingGraphic{position:absolute; top:0; left:0; width:100%; height:100%;}
+#cboxPrevious, #cboxNext, #cboxClose, #cboxSlideshow{cursor:pointer;}
+.cboxPhoto{float:left; margin:auto; border:0; display:block; max-width:100%; -ms-interpolation-mode:bicubic;}
+.cboxIframe{width:100%; height:100%; display:block; border:0; padding:0; margin:0;}
+#colorbox, #cboxContent, #cboxLoadedContent{box-sizing:content-box; -moz-box-sizing:content-box; -webkit-box-sizing:content-box;}
+#cboxOverlay{background:#2b263b; opacity: 0.9; filter: alpha(opacity = 90);}
+#colorbox{outline:0;}
+#cboxTopLeft{width:25px; height:25px; background:url(images/border1.png) no-repeat 0 0;}
+#cboxTopCenter{height:25px; background:url(images/border1.png) repeat-x 0 -50px;}
+#cboxTopRight{width:25px; height:25px; background:url(images/border1.png) no-repeat -25px 0;}
+#cboxBottomLeft{width:25px; height:25px; background:url(images/border1.png) no-repeat 0 -25px;}
+#cboxBottomCenter{height:25px; background:url(images/border1.png) repeat-x 0 -75px;}
+#cboxBottomRight{width:25px; height:25px; background:url(images/border1.png) no-repeat -25px -25px;}
+#cboxMiddleLeft{width:25px; background:url(images/border2.png) repeat-y 0 0;}
+#cboxMiddleRight{width:25px; background:url(images/border2.png) repeat-y -25px 0;}
+#cboxContent{overflow:hidden;}
+.cboxIframe{background:#fff;}
+#cboxError{padding:50px; border:1px solid #ccc;}
+#cboxLoadedContent{margin-bottom:20px;}
+#cboxTitle{position:absolute; bottom:0px; left:0; text-align:center; width:100%; color:#999;}
+#cboxCurrent{position: absolute; bottom: 0px;left: 50%;margin-left: -35px;color: #999;}
+#cboxLoadingOverlay{background:#fff url(images/loading.gif) no-repeat 5px 5px;}
+
+/* these elements are buttons, and may need to have additional styles reset to avoid unwanted base styles */
+#cboxPrevious, #cboxNext, #cboxSlideshow, #cboxClose {border:0; padding:0; margin:0; overflow:visible; width:auto; background:none; }
+
+/* avoid outlines on :active (mouseclick), but preserve outlines on :focus (tabbed navigating) */
+#cboxPrevious:active, #cboxNext:active, #cboxSlideshow:active, #cboxClose:active {outline:0;}
+
+#cboxSlideshow{position:absolute; bottom:0px; right:42px; color:#444;}
+#cboxPrevious{
+	width: 40px;
+	height: 50px;
+	position: fixed;
+	top: 50%;
+	left: 10px;
+	color: rgba(0,0,0,0);
+	cursor: pointer;
+	background: url('../images/cbox-sprite.png') -2px -64px no-repeat;
+	outline: 0;
+}
+#cboxNext{
+	width: 40px;
+	height: 50px;
+	position: fixed;
+	top: 50%;
+	right: 10px;
+	color: rgba(0,0,0,0);
+	cursor: pointer;
+	background: url('../images/cbox-sprite.png') 0px -122px no-repeat;
+	outline: 0;
+}
+#cboxClose{
+	width: 30px;
+	height: 30px;
+	position: fixed;
+	top: 20px;
+	right: 20px;
+	color: rgba(0,0,0,0);
+	cursor: pointer;
+	background: url('../images/cbox-sprite.png') -9px -13px no-repeat;
+	outline: 0;
+}
+
+.cboxIE #cboxTopLeft,
+.cboxIE #cboxTopCenter,
+.cboxIE #cboxTopRight,
+.cboxIE #cboxBottomLeft,
+.cboxIE #cboxBottomCenter,
+.cboxIE #cboxBottomRight,
+.cboxIE #cboxMiddleLeft,
+.cboxIE #cboxMiddleRight {
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#00FFFFFF,endColorstr=#00FFFFFF);
+}
