@@ -52,6 +52,89 @@ h1 {
 section.main {
 	padding: 20px 0;
 }
+.top-nav-holder {
+	position: fixed;
+	top: 30px;
+	right: 30px;
+	z-index: 1;
+}
+nav.main {
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	text-align: right;
+	width: calc( 100% - 100px );
+	padding-right: 100px;
+	background: rgba(43, 38, 59, 0.88);
+	height: 90px;
+	z-index: -1;
+	display: none;
+	box-shadow: 0px 2px 10px -1px rgba(0,0,0,0.3);
+}
+nav.main a {
+	color: #e54f4f;
+	display: inline-block;
+	text-decoration: none;
+	padding: 0px 10px;
+	font-size: 20px;
+	margin-top: 35px;
+	font-weight: 100;
+	transition: all 0.3s;
+}
+nav.main a:hover {
+	color: #fff;
+}
+nav.main a.active {
+	color: #fff;
+}
+.nav-trigger {
+	cursor: pointer;
+	width: 32px;
+	height: 32px;
+}
+.nav-trigger .hamburger {
+	position: absolute;
+	top: 11px;
+	left: 0px;
+	width: 28px;
+	height: 3px;
+	display: block;
+	background: #e54f4f;
+}
+.hamburger:before, .hamburger:after {
+	content: '';
+	width: 100%;
+	height: 3px;
+	position: absolute;
+	background: #e54f4f;
+	left: 0px;
+	transition: all 0.3s;
+}
+.hamburger:before {
+	top: -9px;
+}
+.hamburger:after {
+	top: 9px;
+}
+.nav-trigger.close .hamburger {
+	visibility: hidden;
+} 
+.nav-trigger.close .hamburger:before {
+	transform:rotate(-45deg); 
+	-webkit-transform:rotate(-45deg); 
+	-moz-transform:rotate(-45deg); 
+	-o-transform:rotate(-45deg);
+	visibility: visible;
+	top: 0px;
+} 
+.nav-trigger.close .hamburger:after {
+	transform:rotate(45deg); 
+	-webkit-transform:rotate(45deg); 
+	-moz-transform:rotate(45deg); 
+	-o-transform:rotate(45deg);
+	visibility: visible;
+	top: 0px;
+} 
 .intro { 
 	color: #000;
 	background: #2b263b;
@@ -92,9 +175,30 @@ section.main {
 	text-transform: uppercase;
 	letter-spacing: 5px;
 }
+.intro .explore {
+	display: block;
+	height: 40px;
+	text-align: center;
+	width: 180px;
+	line-height: 44px;
+	bottom: 50px;
+	left: 50%;
+	margin-left: -90px;
+	background: #e54f4f;
+	color: #fff;
+	border-radius: 30px;
+	text-decoration: none;
+	font-weight: 100;
+	text-transform: uppercase;
+	position: absolute;
+	transition: all 0.3s;
+}
+.intro .scroll-down:hover {
+	background: #CB3737;
+}
 section.main.about {
 	height: 300px;
-	background: url('../images/bg.png') center no-repeat;
+	background: url('../images/bg.jpg') center no-repeat;
 	background-size: cover;
 	position: relative;
 	padding: 0px;
@@ -124,14 +228,14 @@ section.main.about .bg-overlay {
 	font-size: 16px;
 	padding-left: 4px;
 }
-.artworks-holder {
+section.main.artworks-holder {
 	width: 100%;
 	text-align: center;
 	color: #2b263b;
 	padding-bottom: 50px;
 }
 .artwork-item {
-	width: 31%;
+	width: 30%;
 	margin: 10px;
 	height: 200px;
 	display: inline-block;
@@ -199,27 +303,32 @@ a.artwork-trigger {
 	background: url('../images/icon-set.png');
 	background-size: cover;
 }
-.skills-holder {
+section.main.skills-holder {
 	background-color: #2b263b;
 	color: #e54f4f;
 	padding-bottom: 40px;
+	text-align: center;
 }
 .skill-column {
 	text-align: left;
 	margin-bottom: 50px;
-	width: 49%;
 	display: inline-block;
 	vertical-align: top;
+}
+.skill-column.column-left {
+	text-align: right;
+	margin-right: 60px;
 }
 .skill-descr {
 	display: inline-block;
 	vertical-align: top;
-	width: 300px;
-	margin-right: 50px;
+	width: 250px;
 }
 .skill-descr .skill-icon {
 	width: 160px;
 	height: 140px;
+	display: inline-block;
+	vertical-align: top;
 }
 .skill-descr .skill-icon.code {
 	background: url('../images/coding-skill.png') 0px 0px no-repeat;
@@ -269,10 +378,47 @@ footer {
 	background-color: #1A1A1A;
 	color: #e54f4f;
 	text-align: center;
-	padding: 50px 0;
 	line-height: 30px;
 }
-
+section.footer-copyright {
+	padding: 10px 0;
+	background: #0b0b0d;
+}
+.footer-column {
+	width: 49%;
+	display: inline-block;
+	text-align: left;
+	line-height: 20px;
+	color: #fff;
+	padding: 20px 0 60px 0;
+	vertical-align: top;
+	font-weight: 100;
+}
+.footer-column b {
+	font-weight: bold;
+	color: #e54f4f;
+}
+.footer-column h1 {
+	color: #e54f4f;
+}
+ul.contacts li {
+	margin: 15px 0;
+	position: relative;
+	padding-left: 35px;
+}
+ul.contacts li:before {
+	content: '';
+	width: 25px;
+	height: 25px;
+	left: 0px;
+	top: -2px;
+	background: url('../images/icon-sprite.png') -10px -62px no-repeat;
+	display: block;
+	position: absolute;
+}
+ul.contacts li.mail:before {
+	background-position: -10px -103px;
+}
 /*
     Colorbox Core Style:
     The following CSS is consistent between example themes and should not be altered.
@@ -357,4 +503,64 @@ footer {
 .cboxIE #cboxMiddleLeft,
 .cboxIE #cboxMiddleRight {
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#00FFFFFF,endColorstr=#00FFFFFF);
+}
+@media screen and (max-width: 1050px) {
+    .content-limiter {
+    	width: 90%;
+    }
+    .artwork-item {
+    	width: 29%;
+    }
+}
+@media screen and (max-width: 650px) {
+    .artwork-item {
+    	width: 42%
+    }
+    .hello-text {
+		font-size: 46px;
+	}
+	.footer-column {
+		width: 100%;
+		padding-bottom: 40px;
+	}
+}
+@media screen and (max-width: 390px) {
+    .artwork-item {
+    	width: 96%;
+    }
+    .skill-column.column-left {
+    	text-align: center;
+    	margin-right: 0px;
+    }
+    .skill-column {
+    	text-align: center;
+    }
+    .skill-item {
+		position: relative;
+		display: block;
+		height: 30px;
+	}
+    .skill-item .skill-title {
+		vertical-align: middle;
+		line-height: 30px;
+		position: absolute;
+		left: -46px;
+		text-align: right;
+		width: 100px;
+		top: -4px;
+	}
+	.skill-item .filling {
+		width: 170px;
+		text-align: right;
+	}
+	.skill-column.column-left .skill-item .filling .dot {
+		float: right;
+		margin: 2px;
+	}
+	.hello-text {
+		font-size: 36px;
+	}
+	.intro-holder {
+		top:30%;
+	}
 }

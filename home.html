@@ -5,35 +5,58 @@
 	<link href='http://fonts.googleapis.com/css?family=Josefin+Sans:100,300,400,600,700,100italic,300italic,400italic,600italic,700italic' rel='stylesheet' type='text/css'>
 	<script type="text/javascript" src="javascripts/jquery-1.11.1.min.js"></script>
 	<script type="text/javascript" src="javascripts/jquery.colorbox-min.js"></script>
+	<script type="text/javascript" src="javascripts/custom.js"></script>
 	<link href='http://fonts.googleapis.com/css?family=Montserrat:400,700|Khula:400,300,600,700,800' rel='stylesheet' type='text/css'>
-	<link rel="icon" type="image/png" href="favicon.png"/>
+	<link rel="icon" type="image/png" href="images/favicon.png"/>
 	<meta charset="UTF-8">
 	<title>Agata M - Art & Web Design</title>
 </head>
 <body>
 
 	<script>
-			$(document).ready(function(){
-				$(".artwork-item").colorbox({rel:'artwork-item'});
-			});
-		</script>
-	<section class="intro">
+		var windowHeight = $( window ).height();
+		$(document).ready(function(){
+			$(".artwork-item").colorbox({rel:'artwork-item'});
+			$('.intro').height(windowHeight);
+			$('.nav-trigger').click(function(){
+				$('nav.main').toggle();
+				$(this).toggleClass('close');
+			})
+			$('a.explore').click(function(){
+		    $('html, body').animate({scrollTop: $('#about').offset().top}, 500);
+		    return false;
+			})
+		});
+	</script>
+
+	<div class="top-nav-holder"> 
+		<div class="nav-trigger">
+			<span class="hamburger"></span>
+		</div>
+		<nav class="main">
+			<a href="#artworks">My work</a>
+			<a href="#skills">My skills</a>
+		</nav>
+	</div>
+
+	<section class="intro" id="intro">
 		<div class="bg-overlay"></div>
 		<div class="intro-holder">
 			<h1>Agata M</h1>
 			<h2>Art & Web Design</h2>
 		</div>
+		<a href="#about" class="explore">Scroll to explore</a>
 	</section>
 
-	<section class="main about">
+	<section class="main about" id="about">
 		<div class="bg-overlay"></div>
 		<div class="content-limiter">
 			<div class="hello-text">Hello, Im Agata</div>
-			<div class="hello-small"> Im keen on web graphics and coding.</div>
+			<div class="hello-small">I love creating beautiful things.</div>
 		</div>
 	</section>
 	
-	<section class="main artworks-holder">
+	<section class="main artworks-holder" id="artworks">
 		<div class="content-limiter">
 			<h1>My work</h1>
 				<a href="images/infographic.png" class='artwork-item lp-infogr'>
@@ -75,18 +98,30 @@
 		</div>
 	</section>
 	
-	<section class="main skills-holder">
+	<section class="main skills-holder" id="skills">
 		<div class="content-limiter">
 			<h1>My skills</h1>
-			<div class="skill-column">
+			<div class="skill-column column-left">
 				<div class="skill-descr">
 					<div class="skill-icon design"></div>
 					<div class="title">Web design</div>
-					<div class="descr">Im keen on art, especially painting. But when it comes to digital art I find it interesting to design websites.</div>
+					<div class="descr">Im keen on art, especially painting.<br>But when it comes to the digital world<br>I fulfill my passion by designing websites.</div>
 				</div>
 				<div class="skill-stats">
 					<div class='skill-item'>
+						<div class="filling">
+							<div class="dot">	</div>
+							<div class="dot">	</div>
+							<div class="dot">	</div>
+							<div class="dot">	</div>
+							<div class="dot">	</div>
+							<div class="dot">	</div>
+							<div class="dot">	</div>
+							<div class="dot">	</div>
+						</div>
 						<div class="skill-title">Photoshop</div>
+					</div>
+					<div class='skill-item'>
 						<div class="filling">
 							<div class="dot">	</div>
 							<div class="dot">	</div>
@@ -97,12 +132,12 @@
 							<div class="dot">	</div>
 							<div class="dot">	</div>
 						</div>
+						<div class="skill-title">Illustrator</div>						
 					</div>
 					<div class='skill-item'>
-						<div class="skill-title">Illustrator</div>
 						<div class="filling">
-							<div class="dot">	</div>
-							<div class="dot">	</div>
+							<div class="dot empty">	</div>
+							<div class="dot empty">	</div>
 							<div class="dot">	</div>
 							<div class="dot">	</div>
 							<div class="dot">	</div>
@@ -110,32 +145,20 @@
 							<div class="dot">	</div>
 							<div class="dot">	</div>
 						</div>
-					</div>
-					<div class='skill-item'>
 						<div class="skill-title">Axure</div>
-						<div class="filling">
-							<div class="dot">	</div>
-							<div class="dot">	</div>
-							<div class="dot">	</div>
-							<div class="dot">	</div>
-							<div class="dot">	</div>
-							<div class="dot">	</div>
-							<div class="dot empty">	</div>
-							<div class="dot empty">	</div>
-						</div>
 					</div>
 					<div class='skill-item'>
-						<div class="skill-title">Corel draw</div>
 						<div class="filling">
-							<div class="dot">	</div>
-							<div class="dot">	</div>
-							<div class="dot">	</div>
-							<div class="dot">	</div>
-							<div class="dot">	</div>
-							<div class="dot">	</div>
 							<div class="dot empty">	</div>
 							<div class="dot empty">	</div>
+							<div class="dot">	</div>
+							<div class="dot">	</div>
+							<div class="dot">	</div>
+							<div class="dot">	</div>
+							<div class="dot">	</div>
+							<div class="dot">	</div>
 						</div>
+						<div class="skill-title">Corel draw</div>
 					</div>
 				</div>
 			</div>
@@ -143,7 +166,7 @@
 				<div class="skill-descr">
 					<div class="skill-icon code"></div>
 					<div class="title">Code</div>
-					<div class="descr">Not only I can design a beautiful and functional website, but I also know how to code it.</div>
+					<div class="descr">Not only can I design a beautiful<br>and functional website, but I also<br>have the skills to code it from scratch.</div>
 				</div>
 				<div class="skill-stats">
 					<div class='skill-item'>
@@ -255,8 +278,28 @@
 		</div>
 	</section>
 	<footer>
-		<div>agatam@gmail.com</div> 
-		<div>513 581 876</div> 
+		<div class="content-limiter">
+			<div class="footer-column">
+				<h1>Need a website?</h1>
+				You have <b>an idea</b> that won't let you sleep?<br>
+				You want to create something <b>amazing?</b><br><br>
+
+				<b>Contact me </b>and we will make your plans a reality.<br> 
+				I will design and code a website you <b>imagined</b>.
+			</div>
+			<div class="footer-column">
+				<h1>Contact me</h1>
+				<ul class="contacts">
+					<li class="mail">agatam@gmail.com</li>
+					<li class="phone">513 581 876</li>
+				</ul>
+			</div>
+		</div>
+		<section class="footer-copyright">
+			<div class="content-limiter">
+			Copyright © 2015 AgataM. All rights reserved.
+			</div>
+		</section>
 	</footer>
 </body>
 
