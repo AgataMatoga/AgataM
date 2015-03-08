@@ -25,8 +25,10 @@ footer, header, hgroup, menu, nav, section {
 body {
 	line-height: 1;
 	background-color: #E8E8E8;
-	font-family: 'Khula';
-	font-size: 14px;
+	font-family: 'Hind';
+	color: #E9E9EC;
+	font-size: 18px;
+	line-height: 24px;
 }
 ol, ul {
 	list-style: none;
@@ -100,6 +102,10 @@ nav.main a.active {
 	height: 3px;
 	display: block;
 	background: #e54f4f;
+	transition: background 0.3s;
+}
+.nav-trigger:hover .hamburger, .nav-trigger:hover .hamburger:before, .nav-trigger:hover .hamburger:after {
+	background: #EF6464;
 }
 .hamburger:before, .hamburger:after {
 	content: '';
@@ -191,10 +197,11 @@ nav.main a.active {
 	font-weight: 100;
 	text-transform: uppercase;
 	position: absolute;
+	font-size: 14px;
 	transition: all 0.3s;
 }
-.intro .scroll-down:hover {
-	background: #CB3737;
+.intro .explore:hover {
+	background: #EF6464;
 }
 section.main.about {
 	height: 300px;
@@ -225,7 +232,6 @@ section.main.about .bg-overlay {
 	color: #fff;
 	position: relative;
 	font-weight: 100;
-	font-size: 16px;
 	padding-left: 4px;
 }
 section.main.artworks-holder {
@@ -314,27 +320,29 @@ section.main.skills-holder {
 	margin-bottom: 50px;
 	display: inline-block;
 	vertical-align: top;
-}
-.skill-column.column-left {
-	text-align: right;
-	margin-right: 60px;
+	background: rgba(0, 0, 0, 0.13);
+	padding: 30px;
+	margin: 10px;
+	width: 305px;
 }
 .skill-descr {
 	display: inline-block;
 	vertical-align: top;
-	width: 250px;
+	text-align: center;
 }
 .skill-descr .skill-icon {
-	width: 160px;
+	width: 170px;
 	height: 140px;
 	display: inline-block;
 	vertical-align: top;
 }
 .skill-descr .skill-icon.code {
 	background: url('../images/coding-skill.png') 0px 0px no-repeat;
+	background: url('../images/code-skill.svg') -21px -28px no-repeat;
 }
 .skill-descr .skill-icon.design {
 	background: url('../images/design-skill.png') 0px 0px no-repeat;
+	background: url('../images/design-skill.svg') -17px -28px no-repeat;
 }
 .skill-descr .title {
 	font-size: 24px;
@@ -342,9 +350,10 @@ section.main.skills-holder {
 	margin-top: 10px
 }
 .skill-descr .descr {
-	color: #fff;
+	color: #D6D5DB;
 	font-weight: 100;
-	line-height: 18px;
+	font-size: 18px;
+	line-height: 24px;
 }
 .skill-stats {
 	margin-top: 20px;
@@ -354,7 +363,8 @@ section.main.skills-holder {
 	vertical-align: middle;
 	margin-right: 7px;
 	line-height: 30px;
-	width: 100px;
+	width: 130px;
+	font-size: 15px;
 }
 .skill-item .filling {
 	display: inline-block;
@@ -376,23 +386,26 @@ section.main.skills-holder {
 }
 footer {
 	background-color: #1A1A1A;
-	color: #e54f4f;
 	text-align: center;
 	line-height: 30px;
 }
 section.footer-copyright {
 	padding: 10px 0;
 	background: #0b0b0d;
+	color: #e54f4f;
+	font-size: 16px;
 }
 .footer-column {
-	width: 49%;
+	width: 47%;
 	display: inline-block;
 	text-align: left;
-	line-height: 20px;
-	color: #fff;
+	line-height: 22px;
 	padding: 20px 0 60px 0;
 	vertical-align: top;
 	font-weight: 100;
+}
+.footer-column:nth-child(1) {
+	margin-right: 20px;
 }
 .footer-column b {
 	font-weight: bold;
@@ -509,13 +522,19 @@ ul.contacts li.mail:before {
     	width: 90%;
     }
     .artwork-item {
-    	width: 29%;
+    	width: 45%;
     }
+    .skill-column {
+		width: 30%;
+	}
 }
 @media screen and (max-width: 650px) {
     .artwork-item {
-    	width: 42%
+    	width: 100%
     }
+    .artwork-item .info-overlay .title {
+		padding-top: 15%;
+	}
     .hello-text {
 		font-size: 46px;
 	}
@@ -523,40 +542,48 @@ ul.contacts li.mail:before {
 		width: 100%;
 		padding-bottom: 40px;
 	}
+	.footer-column:nth-child(1) {
+		margin-right: 0px;
+	}
+	.skill-column {
+		width: 60%;
+	}
+	.skill-column .skill-stats {
+    	text-align: center;
+    }
+    .skill-title {
+    	display: block;
+    }
+    section.main.about {
+		background-attachment: scroll;
+		height: 200px;
+		text-align: center;
+	}
+	.hello-text {
+		padding-top: 90px;
+		text-align: center;
+	}
+	h1 {
+		text-align: center;
+	}
 }
 @media screen and (max-width: 390px) {
     .artwork-item {
     	width: 96%;
     }
-    .skill-column.column-left {
-    	text-align: center;
-    	margin-right: 0px;
-    }
+    .artwork-item .info-overlay .title {
+		padding-top: 30%;
+	}
     .skill-column {
+    	width: auto;
+    	display: block;
+    }
+    .skill-column .skill-descr {
+    	width: auto;
+    }
+    .skill-column .skill-stats {
     	text-align: center;
     }
-    .skill-item {
-		position: relative;
-		display: block;
-		height: 30px;
-	}
-    .skill-item .skill-title {
-		vertical-align: middle;
-		line-height: 30px;
-		position: absolute;
-		left: -46px;
-		text-align: right;
-		width: 100px;
-		top: -4px;
-	}
-	.skill-item .filling {
-		width: 170px;
-		text-align: right;
-	}
-	.skill-column.column-left .skill-item .filling .dot {
-		float: right;
-		margin: 2px;
-	}
 	.hello-text {
 		font-size: 36px;
 	}

@@ -6,9 +6,10 @@
 	<script type="text/javascript" src="javascripts/jquery-1.11.1.min.js"></script>
 	<script type="text/javascript" src="javascripts/jquery.colorbox-min.js"></script>
 	<script type="text/javascript" src="javascripts/custom.js"></script>
-	<link href='http://fonts.googleapis.com/css?family=Montserrat:400,700|Khula:400,300,600,700,800' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Montserrat:400,700|Khula:400,300,600,700,800|Hind:400,300,500,600,700' rel='stylesheet' type='text/css'>
 	<link rel="icon" type="image/png" href="images/favicon.png"/>
 	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1" >
 	<title>Agata M - Art & Web Design</title>
 </head>
 <body>
@@ -16,7 +17,11 @@
 	<script>
 		var windowHeight = $( window ).height();
 		$(document).ready(function(){
-			$(".artwork-item").colorbox({rel:'artwork-item'});
+			$(".artwork-item").colorbox({
+				rel:'artwork-item',
+				scalePhotos: true,
+				maxWidth:'90%'
+			});
 			$('.intro').height(windowHeight);
 			$('.nav-trigger').click(function(){
 				$('nav.main').toggle();
@@ -105,23 +110,11 @@
 				<div class="skill-descr">
 					<div class="skill-icon design"></div>
 					<div class="title">Web design</div>
-					<div class="descr">Im keen on art, especially painting.<br>But when it comes to the digital world<br>I fulfill my passion by designing websites.</div>
+					<div class="descr">Im keen on art, especially painting. But when it comes to the digital world I fulfill my passion by designing websites.</div>
 				</div>
 				<div class="skill-stats">
 					<div class='skill-item'>
-						<div class="filling">
-							<div class="dot">	</div>
-							<div class="dot">	</div>
-							<div class="dot">	</div>
-							<div class="dot">	</div>
-							<div class="dot">	</div>
-							<div class="dot">	</div>
-							<div class="dot">	</div>
-							<div class="dot">	</div>
-						</div>
 						<div class="skill-title">Photoshop</div>
-					</div>
-					<div class='skill-item'>
 						<div class="filling">
 							<div class="dot">	</div>
 							<div class="dot">	</div>
@@ -132,33 +125,45 @@
 							<div class="dot">	</div>
 							<div class="dot">	</div>
 						</div>
-						<div class="skill-title">Illustrator</div>						
 					</div>
 					<div class='skill-item'>
+						<div class="skill-title">Illustrator</div>
 						<div class="filling">
-							<div class="dot empty">	</div>
-							<div class="dot empty">	</div>
 							<div class="dot">	</div>
 							<div class="dot">	</div>
 							<div class="dot">	</div>
 							<div class="dot">	</div>
 							<div class="dot">	</div>
 							<div class="dot">	</div>
-						</div>
+							<div class="dot">	</div>
+							<div class="dot">	</div>
+						</div>						
+					</div>
+					<div class='skill-item'>
 						<div class="skill-title">Axure</div>
+						<div class="filling">
+							<div class="dot">	</div>
+							<div class="dot">	</div>
+							<div class="dot">	</div>
+							<div class="dot">	</div>
+							<div class="dot">	</div>
+							<div class="dot">	</div>
+							<div class="dot empty">	</div>
+							<div class="dot empty">	</div>
+						</div>
 					</div>
 					<div class='skill-item'>
-						<div class="filling">
-							<div class="dot empty">	</div>
-							<div class="dot empty">	</div>
-							<div class="dot">	</div>
-							<div class="dot">	</div>
-							<div class="dot">	</div>
-							<div class="dot">	</div>
-							<div class="dot">	</div>
-							<div class="dot">	</div>
-						</div>
 						<div class="skill-title">Corel draw</div>
+						<div class="filling">
+							<div class="dot">	</div>
+							<div class="dot">	</div>
+							<div class="dot">	</div>
+							<div class="dot">	</div>
+							<div class="dot">	</div>
+							<div class="dot">	</div>
+							<div class="dot empty">	</div>
+							<div class="dot empty">	</div>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -166,7 +171,7 @@
 				<div class="skill-descr">
 					<div class="skill-icon code"></div>
 					<div class="title">Code</div>
-					<div class="descr">Not only can I design a beautiful<br>and functional website, but I also<br>have the skills to code it from scratch.</div>
+					<div class="descr">Not only can I design a beautiful and functional website, but I also have the skills to code it from scratch.</div>
 				</div>
 				<div class="skill-stats">
 					<div class='skill-item'>
