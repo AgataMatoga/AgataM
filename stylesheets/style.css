@@ -45,7 +45,7 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
-h1 {
+h3 {
 	font-weight: 100;
 	font-size: 30px;
 	padding: 20px 0;
@@ -220,7 +220,7 @@ section.main.about .bg-overlay {
 	opacity: 0.7; 
 	position: absolute;
 }
-.hello-text {
+.hello-big {
 	font-size: 60px;
 	font-weight: bold;
 	color: #E54F4F;
@@ -234,7 +234,7 @@ section.main.about .bg-overlay {
 	font-weight: 100;
 	padding-left: 4px;
 }
-section.main.artworks-holder {
+section.main.artworks {
 	width: 100%;
 	text-align: center;
 	color: #2b263b;
@@ -309,13 +309,13 @@ a.artwork-trigger {
 	background: url('../images/icon-set.png');
 	background-size: cover;
 }
-section.main.skills-holder {
+section.main.skills {
 	background-color: #2b263b;
 	color: #e54f4f;
 	padding-bottom: 40px;
 	text-align: center;
 }
-.skill-column {
+.single-skill {
 	text-align: left;
 	margin-bottom: 50px;
 	display: inline-block;
@@ -330,17 +330,17 @@ section.main.skills-holder {
 	vertical-align: top;
 	text-align: center;
 }
-.skill-descr .skill-icon {
+.skill-descr .icon {
 	width: 170px;
 	height: 140px;
 	display: inline-block;
 	vertical-align: top;
 }
-.skill-descr .skill-icon.code {
+.skill-descr .icon.code {
 	background: url('../images/coding-skill.png') 0px 0px no-repeat;
 	background: url('../images/code-skill.svg') -21px -28px no-repeat;
 }
-.skill-descr .skill-icon.design {
+.skill-descr .icon.design {
 	background: url('../images/design-skill.png') 0px 0px no-repeat;
 	background: url('../images/design-skill.svg') -17px -28px no-repeat;
 }
@@ -358,7 +358,7 @@ section.main.skills-holder {
 .skill-stats {
 	margin-top: 20px;
 }
-.skill-item .skill-title {
+.experience-row .experience-name {
 	display: inline-block;
 	vertical-align: middle;
 	margin-right: 7px;
@@ -366,18 +366,18 @@ section.main.skills-holder {
 	width: 130px;
 	font-size: 15px;
 }
-.skill-item .filling {
+.experience-row .experience-value {
 	display: inline-block;
 	vertical-align: middle;
 }
-.skill-item  .filling .dot {
+.experience-row .experience-value .dot {
 	display: inline-block;
 	width: 14px;
 	height: 14px;
 	border-radius: 50%;
 	background-color: #e54f4f; 
 }
-.skill-item  .filling .dot.empty {
+.experience-row .experience-value .dot.empty {
 	display: inline-block;
 	width: 16px;
 	height: 16px;
@@ -389,7 +389,7 @@ footer {
 	text-align: center;
 	line-height: 30px;
 }
-section.footer-copyright {
+.footer-copyright {
 	padding: 10px 0;
 	background: #0b0b0d;
 	color: #e54f4f;
@@ -411,7 +411,7 @@ section.footer-copyright {
 	font-weight: bold;
 	color: #e54f4f;
 }
-.footer-column h1 {
+.footer-column h3 {
 	color: #e54f4f;
 }
 ul.contacts li {
@@ -524,9 +524,12 @@ ul.contacts li.mail:before {
     .artwork-item {
     	width: 45%;
     }
-    .skill-column {
+    .single-skill {
 		width: 30%;
 	}
+	.experience-row {
+    	text-align: center;
+    }
 }
 @media screen and (max-width: 650px) {
     .artwork-item {
@@ -535,7 +538,7 @@ ul.contacts li.mail:before {
     .artwork-item .info-overlay .title {
 		padding-top: 15%;
 	}
-    .hello-text {
+    .hello-big {
 		font-size: 46px;
 	}
 	.footer-column {
@@ -545,13 +548,13 @@ ul.contacts li.mail:before {
 	.footer-column:nth-child(1) {
 		margin-right: 0px;
 	}
-	.skill-column {
+	.single-skill {
 		width: 60%;
 	}
-	.skill-column .skill-stats {
+	.single-skill .skill-stats {
     	text-align: center;
     }
-    .skill-title {
+    .experience-name {
     	display: block;
     }
     section.main.about {
@@ -559,11 +562,11 @@ ul.contacts li.mail:before {
 		height: 200px;
 		text-align: center;
 	}
-	.hello-text {
+	.hello-big {
 		padding-top: 90px;
 		text-align: center;
 	}
-	h1 {
+	h3 {
 		text-align: center;
 	}
 }
@@ -574,17 +577,17 @@ ul.contacts li.mail:before {
     .artwork-item .info-overlay .title {
 		padding-top: 30%;
 	}
-    .skill-column {
+    .single-skill {
     	width: auto;
     	display: block;
     }
-    .skill-column .skill-descr {
+    .single-skill .skill-descr {
     	width: auto;
     }
-    .skill-column .skill-stats {
+    .single-skill .skill-stats {
     	text-align: center;
     }
-	.hello-text {
+	.hello-big {
 		font-size: 36px;
 	}
 	.intro-holder {
